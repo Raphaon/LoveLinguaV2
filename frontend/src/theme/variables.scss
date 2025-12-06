@@ -1,0 +1,79 @@
+:root {
+  /* Core brand colors */
+  --ion-color-primary: #ff4b7d;
+  --ion-color-primary-rgb: 255, 75, 125;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #e04370;
+  --ion-color-primary-tint: #ff628d;
+
+  --ion-color-secondary: #ffc857;
+  --ion-color-secondary-rgb: 255, 200, 87;
+  --ion-color-secondary-contrast: #0f172a;
+  --ion-color-secondary-contrast-rgb: 15, 23, 42;
+  --ion-color-secondary-shade: #e0b24e;
+  --ion-color-secondary-tint: #ffcf69;
+
+  --ion-color-tertiary: #6c63ff;
+  --ion-color-tertiary-rgb: 108, 99, 255;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #5f57e0;
+  --ion-color-tertiary-tint: #7b73ff;
+
+  --ion-color-success: #34d399;
+  --ion-color-success-rgb: 52, 211, 153;
+  --ion-color-success-contrast: #0f172a;
+  --ion-color-success-contrast-rgb: 15, 23, 42;
+  --ion-color-success-shade: #2fba88;
+  --ion-color-success-tint: #48d8a3;
+
+  --ion-color-warning: #f59e0b;
+  --ion-color-warning-rgb: 245, 158, 11;
+  --ion-color-warning-contrast: #0f172a;
+  --ion-color-warning-contrast-rgb: 15, 23, 42;
+  --ion-color-warning-shade: #d88a0a;
+  --ion-color-warning-tint: #f6a826;
+
+  --ion-color-danger: #ef4444;
+  --ion-color-danger-rgb: 239, 68, 68;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #d53d3d;
+  --ion-color-danger-tint: #f05858;
+
+  /* Surfaces & text */
+  --ion-background-color: #0f172a;
+  --ion-background-color-rgb: 15, 23, 42;
+  --ion-text-color: #e5e7eb;
+  --ion-text-color-rgb: 229, 231, 235;
+  --ion-text-color-step-50: #cbd5e1;
+  --ion-text-color-step-100: #94a3b8;
+  --ion-text-color-step-150: #64748b;
+  --ion-card-background: #111827;
+  --ion-toolbar-background: #0f172a;
+  --ion-item-background: #111827;
+  --ion-border-color: rgba(255, 255, 255, 0.08);
+
+  /* Elevation & radii */
+  --shadow-soft: 0 12px 32px rgba(0, 0, 0, 0.2);
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.18);
+  --radius-pill: 9999px;
+  --radius-card: 24px;
+  --radius-md: 16px;
+
+  /* Spacing scale */
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+
+  /* Typography */
+  --app-font-family: 'Poppins', 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: var(--app-font-family);
+  background: var(--ion-background-color);
+  color: var(--ion-text-color);
+}
