@@ -1,0 +1,123 @@
+:host {
+  --background: var(--ion-background-color);
+}
+
+.login-toolbar {
+  --background: transparent;
+  --color: var(--ion-text-color);
+  border: none;
+}
+
+.login-content {
+  --background: var(--ion-background-color);
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  padding: var(--space-lg) var(--space-lg) calc(var(--space-lg) + 8px);
+  gap: var(--space-lg);
+  box-sizing: border-box;
+}
+
+.intro h1 {
+  margin: 0 0 var(--space-sm);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ion-text-color);
+}
+
+.intro p {
+  margin: 0;
+  color: var(--ion-text-color-step-100);
+  font-size: 14px;
+}
+
+.login-card {
+  background: var(--ion-card-background);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-sm) var(--space-md);
+}
+
+.login-card ion-card-header {
+  padding: var(--space-sm) 0 var(--space-sm);
+}
+
+.login-card ion-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ion-text-color);
+  margin-bottom: var(--space-xs);
+}
+
+.login-card ion-card-subtitle {
+  color: var(--ion-text-color-step-100);
+  font-size: 14px;
+}
+
+.form-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+.form-item {
+  --background: transparent;
+  --border-color: var(--ion-border-color);
+  --color: var(--ion-text-color);
+  border: 1px solid var(--ion-border-color);
+  border-radius: var(--radius-md);
+  padding: 0 var(--space-sm);
+}
+
+.form-item ion-label {
+  color: var(--ion-text-color-step-50);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.form-item ion-input {
+  color: var(--ion-text-color);
+  --placeholder-color: var(--ion-text-color-step-100);
+}
+
+.cta-area {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.primary-cta {
+  --background: var(--ion-color-primary);
+  --background-activated: var(--ion-color-primary-shade);
+  --border-radius: var(--radius-pill);
+  --box-shadow: var(--shadow-soft);
+  font-weight: 700;
+  padding: 0 var(--space-md);
+  height: 48px;
+}
+
+.secondary-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.secondary-links .link {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.secondary-links .link[color='light'] {
+  color: var(--ion-text-color-step-50);
+}
+
+.secondary-links .link[color='primary'] {
+  color: var(--ion-color-primary);
+  font-weight: 600;
+}

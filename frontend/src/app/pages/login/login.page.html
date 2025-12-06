@@ -1,0 +1,59 @@
+<ion-page>
+  <ion-header translucent="true">
+    <ion-toolbar class="login-toolbar">
+      <ion-title>Connexion</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true" class="login-content">
+    <div class="content-wrapper">
+      <div class="intro">
+        <h1>Ravi de te revoir</h1>
+        <p>Connecte-toi pour continuer à nourrir ta relation.</p>
+      </div>
+
+      <ion-card class="login-card">
+        <ion-card-header>
+          <ion-card-title>Accède à LoveLingua</ion-card-title>
+          <ion-card-subtitle>Entre tes identifiants pour te connecter.</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-list lines="none" class="form-list">
+            <ion-item class="form-item">
+              <ion-label position="stacked">Email</ion-label>
+              <ion-input
+                type="email"
+                inputmode="email"
+                autocomplete="email"
+                [(ngModel)]="credentials.email"
+                placeholder="ton.email@example.com">
+              </ion-input>
+            </ion-item>
+
+            <ion-item class="form-item">
+              <ion-label position="stacked">Mot de passe</ion-label>
+              <ion-input
+                type="password"
+                autocomplete="current-password"
+                [(ngModel)]="credentials.password"
+                placeholder="********">
+              </ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+
+      <div class="cta-area">
+        <ion-button expand="block" shape="round" class="primary-cta" (click)="onLogin()">
+          Se connecter
+        </ion-button>
+
+        <div class="secondary-links">
+          <ion-text color="light" class="link" (click)="onForgotPassword()">Mot de passe oublié ?</ion-text>
+          <ion-text color="primary" class="link" (click)="onCreateAccount()">Créer un compte</ion-text>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-page>
