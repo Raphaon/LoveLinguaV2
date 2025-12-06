@@ -1,93 +1,368 @@
-# LoveLingua
+Voici un **README complet, professionnel, structuré**, parfaitement adapté au projet **LoveLingua**, conforme aux standards GitHub et optimisé pour travailler avec **Codex / ChatGPT / GPT-Engineer**.
 
-LoveLingua est une application mobile qui aide les couples et les célibataires à mieux se comprendre grâce aux langages de l'amour, des quiz, des mini-jeux et des outils de coaching relationnel.
-
----
-
-## 🎯 Objectif
-
-LoveLingua est une application mobile (Ionic / Angular) avec un backend Node.js / Express / TypeScript et une base de données PostgreSQL.
-
-Ce projet suit une méthode de travail structurée pour faciliter la collaboration avec une IA (Codex / ChatGPT) :
-
-- Définir clairement les **prérequis** et l'**environnement**
-- Structurer le projet en **backend**, **frontend**, **docs** (et **mobile**)
-- Travailler par **tranches verticales (vertical slices)** : une fonctionnalité complète à la fois (backend + frontend)
-- Générer des documents clairs pour guider l'IA (pré-requis, méthode, plan de features)
+Tu peux le mettre dans :
+📄 `README.md` (racine du projet)
 
 ---
 
-## 🧱 Structure du projet
+# ❤️ **LoveLingua — Application Mobile d’Amélioration Relationnelle**
 
-```text
+### *Comprendre, aimer mieux, se connecter profondément*
+
+---
+
+## 📌 **Présentation**
+
+**LoveLingua** est une application mobile intuitive et interactive qui aide les couples et les célibataires à mieux comprendre leur style d’amour et à renforcer leur communication.
+
+Elle s’appuie sur :
+
+* Les **5 langages de l’amour**
+* Des **quiz psychologiques**
+* Un **mode couple** synchronisé
+* Des **mini-jeux** émotionnels
+* Un **dashboard relationnel intelligent**
+* Un modèle **freemium/premium**
+
+LoveLingua est conçue comme un véritable **coach relationnel de poche**.
+
+---
+
+# 🏛 **Architecture du Projet**
+
+LoveLingua repose sur une architecture moderne et modulaire :
+
+```
 lovelingua/
- ├─ backend/          # API Node/TS, Express, logique métier, Prisma plus tard
- ├─ frontend/         # App mobile Ionic/Angular
- ├─ mobile/           # Capacitor / plateformes mobiles (Android, iOS)
- ├─ docs/             # cahier des charges, specs, méthode, etc.
- │   ├─ architecture/
- │   └─ specs/
- ├─ .env.example
- └─ README.md
+ ├── backend/        → API Node.js + Express + TypeScript (+ Prisma prochainement)
+ ├── frontend/       → App mobile Ionic + Angular (UI/UX mobile-first)
+ ├── mobile/         → Capacitor (Android/iOS)
+ ├── docs/           → Spécifications, méthode, architecture, roadmap
+ ├── .env.example    → Variables d’environnement
+ └── README.md       → Ce document
 ```
 
 ---
 
-## 🖥 Environnement détecté
+# 🚀 **Technologies Principales**
 
-- **OS** : MINGW64_NT-10.0-26200 (3.6.4-b9f03e96.x86_64)
-- **Node** : v22.13.1
-- **npm** : 11.1.0
-- **TypeScript** : non installé
-- **Angular CLI** : non installé
-- **Ionic CLI** : 7.2.1
+### **Backend**
 
----
+* Node.js
+* Express
+* TypeScript
+* Prisma ORM (bientôt)
+* PostgreSQL
+* JWT (access + refresh tokens)
+* Zod (validation des inputs)
 
-## 🗄 Stack choisie
+### **Frontend Mobile**
 
-- **Backend** : Node + Express + TypeScript
-- **Frontend** : Ionic + Angular (mobile-first)
-- **Base de données** : PostgreSQL (nom : lovelingua_db)
-- **Mobile (Capacitor)** : Oui (prévu via dossier mobile/)
+* Ionic
+* Angular
+* Capacitor
+* UI Material + Design premium LoveLingua
 
----
+### **Infrastructure (plus tard)**
 
-## 🧠 Méthode de travail (Résumé)
-
-1. **Définir la structure de données (entités LoveLingua)** avant la base de données.
-2. Concevoir les **modèles** (Prisma, schéma SQL) à partir des entités.
-3. Implémenter la **BDD** (migrations, connexion).
-4. Travailler par **fonctionnalités complètes** :
-   - Définir le *contrat d'API* (URL, body, réponse)
-   - Implémenter le **backend** (endpoint, service, tests)
-   - Implémenter le **frontend** (page, service, intégration)
-5. Ajouter progressivement :
-   - Tests
-   - Sécurité
-   - Optimisations / refactor
-
-Voir `docs/methodologie.md` pour plus de détails.
+* Docker
+* CI/CD GitHub Actions
+* Déploiement API (Render, Railway ou VPS)
+* Store Android (AAB) / iOS (IPA)
 
 ---
 
-## 🤖 Travail avec l'IA (Codex / ChatGPT)
+# 🎯 **Objectifs Fonctionnels**
 
-1. Fournir à l'IA :
-   - ce `README.md`
-   - `docs/prerequis.md`
-   - `docs/plan-features.md`
-   - la structure du projet (arborescence)
+### ✔ Pour les utilisateurs en SOLO
 
-2. Demander à l'IA :
-   - d'analyser le projet
-   - de proposer un plan par **LOTS / SPRINTS** (Auth, Onboarding, Mode Solo/Couple, Quiz, etc.)
-   - de générer le code **fichier complet** par **tranche verticale**
+* Comprendre leur style d’amour
+* Réaliser des quiz personnalisés
+* Accéder à une analyse de personnalité
+* Voir leur évolution dans le temps
+* Utiliser des mini-jeux émotionnels
+
+### ✔ Pour les COUPLES
+
+* Se synchroniser via un **code de couple**
+* Comparer leurs résultats
+* Recevoir des recommandations
+* Jouer à des mini-jeux à deux
+* Suivre un dashboard relationnel dynamique
+
+### ✔ Pour tous
+
+* Fonctionnalités gratuites attractives
+* Contenu premium débloquable
 
 ---
 
-## 👤 Auteur
+# 🧱 **Structure Backend (Express + TypeScript)**
 
-- Projet : **LoveLingua**
-- Auteur : **Rapha ONDOBO**
+```
+backend/
+ ├── src/
+ │    ├── routes/
+ │    │      └── health.ts
+ │    ├── app.ts
+ │    └── server.ts
+ ├── package.json
+ ├── tsconfig.json
+ └── README.md
+```
 
+### Endpoint de test
+
+```http
+GET /health
+```
+
+Renvoie :
+
+```json
+{
+  "status": "ok",
+  "message": "API LoveLingua en ligne",
+  "timestamp": "2025-12-05T..."
+}
+```
+
+---
+
+# 🧩 **Structure Frontend (Ionic + Angular)**
+
+```
+frontend/
+ ├── src/
+ └── README.md
+```
+
+L'application inclura :
+
+### Pages principales
+
+* Onboarding
+* Register / Login
+* Dashboard émotionnel
+* Quiz Love Languages
+* Résultats & compatibilité
+* Mode Couple
+* Mini-Jeux
+* Paramètres
+
+---
+
+# 🧩 **Fonctionnalités — Roadmap (Vertical Slices)**
+
+Document complet dans `docs/plan-features.md`.
+Résumé ici :
+
+### **LOT 1 — Authentification**
+
+* Signup
+* Login
+* Tokens
+* Profil minimal
+
+### **LOT 2 — Onboarding + Profil**
+
+* 3–5 écrans d’introduction
+* Édition du profil utilisateur
+
+### **LOT 3 — Mode Solo / Mode Couple**
+
+* Création de couple
+* Joindre couple via code
+* Synchronisation des résultats
+
+### **LOT 4 — Quiz “Langages de l’Amour”**
+
+* 30 questions
+* Calcul du langage dominant
+* Analyse détaillée
+
+### **LOT 5 — Dashboard Relationnel**
+
+* Résultats solo
+* Comparaison couple
+* Conseils personnalisés
+
+### **LOT 6 — Mini-Jeux**
+
+* Connais-tu ton partenaire ?
+* True/False
+* Défis relationnels
+* Cartes conversationnelles
+
+### **LOT 7 — Freemium / Premium**
+
+* Accès restreint pour free
+* Comparaison avancée & coaching IA pour premium
+
+---
+
+# 🧠 **Modèle de Données (Prisma – à venir)**
+
+Voici les entités principales :
+
+### **User**
+
+```
+id, email, password, firstName, language, country, avatar
+```
+
+### **Couple**
+
+```
+id, partner1Id, partner2Id, joinCode
+```
+
+### **Quiz**
+
+```
+id, userId, answers[], score, primaryLoveLanguage
+```
+
+### **Questions**
+
+```
+id, textFr, textEn, category
+```
+
+### **MiniGame**
+
+```
+id, type, difficulty, payload
+```
+
+---
+
+# 🧪 **Tests**
+
+À intégrer :
+
+* Jest pour le backend
+* Tests d’intégration (API REST)
+* Tests end-to-end (plus tard avec Cypress)
+
+---
+
+# 🔐 Sécurité
+
+* Hashing passwords → BCrypt
+* JWT (Access + Refresh)
+* Validation Zod
+* Protection rate-limit
+* Sanitization inputs
+
+---
+
+# 📦 Installation & Démarrage
+
+## 1️⃣ Cloner le projet
+
+```bash
+git clone https://github.com/raphaon/lovelingua.git
+cd lovelingua
+```
+
+---
+
+## 2️⃣ Configurer la base de données
+
+Créer une DB PostgreSQL nommée :
+
+```
+lovelingua_db
+```
+
+Remplir le fichier `.env` à partir de `.env.example`.
+
+---
+
+## 3️⃣ Backend
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+Serveur disponible sur :
+
+```
+http://localhost:3000/health
+```
+
+---
+
+## 4️⃣ Frontend
+
+```bash
+cd frontend
+ionic serve
+```
+
+---
+
+## 5️⃣ Build mobile (plus tard)
+
+```bash
+ionic build
+npx cap init lovelingua com.example.lovelingua
+npx cap add android
+```
+
+---
+
+# 🤖 **Guide d’Utilisation pour Codex / ChatGPT**
+
+Pour travailler efficacement avec l’IA :
+
+## Fournir systématiquement :
+
+* `README.md`
+* `docs/prerequis.md`
+* `docs/plan-features.md`
+* Le LOT en cours
+* La structure backend/frontend
+
+## Exemple de prompt :
+
+> Analyse le projet LoveLingua (README + docs).
+> Nous allons développer le LOT 1 : Auth.
+> Génère les fichiers complets pour :
+>
+> * route Express
+> * controller
+> * service
+> * validation
+> * schema Prisma
+>   Respecte TypeScript, Express, structure backend, sécurité JWT, et génère les fichiers complets.
+
+---
+
+# 📄 **Licence**
+
+© 2025 – Rapha ONDOBO.
+Projet privé. Tous droits réservés.
+
+---
+
+# 💬 **Auteur**
+
+**Raphaël ONDOBO**
+Développeur Full-Stack • Architecte Mobile • Ingénieur Systèmes
+
+---
+
+# ❤️ Merci d’utiliser LoveLingua
+
+Souhaites-tu que je génère aussi :
+
+* le **README spécifique backend** ?
+* le **README spécifique frontend** ?
+* une **doc Swagger API** ?
+* une **spécification Prisma complète** ?
+
+Je peux tout produire.
